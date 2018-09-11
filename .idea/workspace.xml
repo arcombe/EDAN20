@@ -1,23 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6126f7c9-904f-4615-bb2c-38661bf4aa7d" name="Default" comment="" />
+    <list default="true" id="6126f7c9-904f-4615-bb2c-38661bf4aa7d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Selma/bannlyst.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/Selma/bannlyst.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Selma/gosta.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/Selma/gosta.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Selma/herrgard.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/Selma/herrgard.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Selma/jerusalem.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/Selma/jerusalem.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Selma/kejsaren.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/Selma/kejsaren.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Selma/marbacka.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/Selma/marbacka.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Selma/nils.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/Selma/nils.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Selma/osynliga.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/Selma/osynliga.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/Selma/troll.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/Selma/troll.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/indexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/indexer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/master.idx" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/master.idx" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1626746713">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1457" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="1457" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="indexer.py" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab1/indexer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+            <state relative-caret-position="561">
+              <caret line="141" column="66" selection-start-line="141" selection-start-column="66" selection-end-line="141" selection-end-column="66" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <marker date="1536676989676" expanded="true" signature="2499:2739" ph="..." />
+                <marker date="1536676989676" expanded="true" signature="2769:3293" ph="..." />
               </folding>
             </state>
           </provider>
@@ -35,11 +70,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="23" />
-    <option name="width" value="1260" />
-    <option name="height" value="737" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="921" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -52,12 +87,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="sprtek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sprtek" type="462c0819:PsiDirectoryNode" />
+              <item name="Spr-ktek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spr-ktek" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sprtek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sprtek" type="462c0819:PsiDirectoryNode" />
+              <item name="Spr-ktek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spr-ktek" type="462c0819:PsiDirectoryNode" />
               <item name="lab1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -95,53 +130,40 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1260" height="737" extended-state="0" />
+    <frame x="65" y="24" width="921" height="1176" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09465479" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lab1/indexer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        <state relative-caret-position="561">
+          <caret line="141" column="66" selection-start-line="141" selection-start-column="66" selection-end-line="141" selection-end-column="66" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab1/indexer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1536676989676" expanded="true" signature="2499:2739" ph="..." />
+            <marker date="1536676989676" expanded="true" signature="2769:3293" ph="..." />
           </folding>
         </state>
       </provider>
