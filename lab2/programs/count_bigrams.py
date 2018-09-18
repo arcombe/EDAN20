@@ -5,7 +5,7 @@ Usage: python count_bigrams.py < corpus.txt
 __author__ = "Pierre Nugues"
 
 import sys
-
+import pickle
 import regex
 
 
@@ -32,3 +32,4 @@ if __name__ == '__main__':
     frequency_bigrams = count_bigrams(words)
     for bigram in frequency_bigrams:
         print(frequency_bigrams[bigram], "\t", bigram)
+    pickle.dump(frequency_bigrams, open('bigrams.idx', "wb"))

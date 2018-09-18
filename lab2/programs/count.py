@@ -5,7 +5,7 @@ Usage: python count.py < corpus.txt
 __author__ = "Pierre Nugues"
 
 import sys
-
+import pickle
 import regex as re
 
 
@@ -30,3 +30,4 @@ if __name__ == '__main__':
     frequency = count_unigrams(words)
     for word in sorted(frequency.keys(), key=frequency.get, reverse=True):
         print(word, '\t', frequency[word])
+    pickle.dump(frequency, open('unigrams.idx', "wb"))

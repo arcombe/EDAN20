@@ -5,7 +5,6 @@ Usage: python count_ngrams.py N < corpus.txt
 __author__ = "Pierre Nugues"
 
 import sys
-
 import regex
 
 
@@ -50,3 +49,4 @@ if __name__ == '__main__':
     frequency = count_ngrams(words, n)
     for word in sorted(frequency, key=frequency.get, reverse=True):
         print(word, '\t', frequency[word])
+

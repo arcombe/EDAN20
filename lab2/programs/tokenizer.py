@@ -59,6 +59,5 @@ if __name__ == '__main__':
         print(word)
     words = tokenize2(text)
     print(words)"""
-    words = tokenize(text)
-    for word in words:
-        print(word)
+    words = tokenize3(text)
+    print(words)
