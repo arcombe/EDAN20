@@ -41,6 +41,8 @@ def train(corpus):
 
     for sentence in corpus:
         for row in sentence:
+            print(row)
+            quit(0)
             chunk = row['chunk']
             pos = row['pos']
 
