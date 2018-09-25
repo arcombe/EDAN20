@@ -39,10 +39,9 @@ def train(corpus):
     Fill in code to compute the chunk distribution for each part of speech
     """
 
+
     for sentence in corpus:
         for row in sentence:
-            print(row)
-            quit(0)
             chunk = row['chunk']
             pos = row['pos']
 
@@ -52,8 +51,9 @@ def train(corpus):
                 chunk_dist[pos][chunk] = 1
 
 
-    print(chunk_dist)
-    quit(0)
+    #print(chunk_dist)
+    #quit(0)
+
 
     # We determine the best association
     pos_chunk = {}

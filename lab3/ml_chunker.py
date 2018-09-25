@@ -25,13 +25,13 @@ def extract_features(sentences, w_size, feature_names):
     X_l = []
     y_l = []
     for sentence in sentences:
-        X, y = extract_features_sent(sentence, w_size, feature_names)
+        X, y = extract_features_sent(sentence, w_size, feature_names, True)
         X_l.extend(X)
         y_l.extend(y)
     return X_l, y_l
 
 
-def extract_features_sent(sentence, w_size, feature_names):
+def extract_features_sent(sentence, w_size, feature_names, train):
     """
     Extract the features from one sentence
     returns X and y, where X is a list of dictionaries and
@@ -44,6 +44,7 @@ def extract_features_sent(sentence, w_size, feature_names):
     # We pad the sentence to extract the context window more easily
     start = "BOS BOS BOS\n"
     end = "\nEOS EOS EOS"
+
     start *= w_size
     end *= w_size
     sentence = start + sentence
@@ -72,6 +73,12 @@ def extract_features_sent(sentence, w_size, feature_names):
         for j in range(2 * w_size + 1):
             x.append(padded_sentence[i + j][1])
         # The chunks (Up to the word)
+        if train:
+            for j in range(w_size):
+                x.append(padded_sentence[i + j][2])
+        else:
+            for j in range(w_size):
+                x.append('BOS')
         """
         for j in range(w_size):
             feature_line.append(padded_sentence[i + j][2])
@@ -80,37 +87,51 @@ def extract_features_sent(sentence, w_size, feature_names):
         X.append(dict(zip(feature_names, x)))
         # The classes are stored in a list
         y.append(padded_sentence[i + w_size][2])
+
     return X, y
 
 
 def predict(test_sentences, feature_names, f_out):
     for test_sentence in test_sentences:
-        X_test_dict, y_test = extract_features_sent(test_sentence, w_size, feature_names)
-        # Vectorize the test sentence and one hot encoding
-        X_test = vec.transform(X_test_dict)
-        # Predicts the chunks and returns numbers
-        y_test_predicted = classifier.predict(X_test)
+        X_test_dict, y_test = extract_features_sent(test_sentence, w_size, feature_names, False)
+        y_test_predicted = []
+        for x_test in X_test_dict:
+            if len(y_test_predicted) == 1:
+                x_test['c_n1'] = y_test_predicted[-1]
+            elif len(y_test_predicted) > 1:
+                x_test['c_n2'] = y_test_predicted[-2]
+                x_test['c_n1'] = y_test_predicted[-1]
+            # Vectorize the test sentence and one hot encoding
+            #print('x:', x_test)
+            #print('y_hat:', y_test_predicted)
+            x_test = vec.transform(x_test)
+            # Predicts the chunks and returns numbers
+            y_test_predicted.append(classifier.predict(x_test)[0])
         # Appends the predicted chunks as a last column and saves the rows
         rows = test_sentence.splitlines()
         rows = [rows[i] + ' ' + y_test_predicted[i] for i in range(len(rows))]
         for row in rows:
             f_out.write(row + '\n')
         f_out.write('\n')
+        #exit()
     f_out.close()
 
 
 if __name__ == '__main__':
     start_time = time.clock()
-    train_corpus = '../../../corpus/conll2000/train.txt'
-    test_corpus = '../../../corpus/conll2000/test.txt'
+    train_corpus = './train.txt'
+    test_corpus = './test.txt'
     w_size = 2  # The size of the context window to the left and right of the word
     feature_names = ['word_n2', 'word_n1', 'word', 'word_p1', 'word_p2',
-                     'pos_n2', 'pos_n1', 'pos', 'pos_p1', 'pos_p2']
+                     'pos_n2', 'pos_n1', 'pos', 'pos_p1', 'pos_p2', 'c_n2', 'c_n1']
+
+    #feature_names = ['pos_n2', 'pos_n1', 'pos', 'pos_p1', 'pos_p2']
 
     train_sentences = conll_reader.read_sentences(train_corpus)
 
     print("Extracting the features...")
     X_dict, y = extract_features(train_sentences, w_size, feature_names)
+
 
     print("Encoding the features...")
     # Vectorize the feature matrix and carry out a one-hot encoding
@@ -123,6 +144,8 @@ if __name__ == '__main__':
     training_start_time = time.clock()
     print("Training the model...")
     classifier = linear_model.LogisticRegression(penalty='l2', dual=True, solver='liblinear')
+    #classifier = tree.DecisionTreeClassifier()
+    #classifier = linear_model.Perceptron(penalty='l2')
     model = classifier.fit(X, y)
     print(model)
 
