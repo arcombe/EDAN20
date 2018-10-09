@@ -137,10 +137,21 @@ def cos_sim(master, files, N):
         for file in files:
             dict[file].append(tf_idf_2(master, key, file, N, sum[file]))
 
+    result = [file for file in files]
+    result.insert(0, 'Files')
+    result = [result]
     for file_a in files:
+        res = [file_a]
         for file_b in files:
-            print(dot(dict[file_a], dict[file_b]), file_a, file_b)
+            res.append(dot(dict[file_a], dict[file_b]))
+            #print(dot(dict[file_a], dict[file_b]), file_a, file_b)
+        result.append(res)
 
+    for x in result:
+        sen = ""
+        for i in x:
+            sen = sen + " " + str(i)
+        print(sen)
 
 
 
